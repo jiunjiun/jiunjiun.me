@@ -47,5 +47,10 @@ gem 'google-analytics-rails'
 # deploy
 gem 'mina'
 gem 'mina-puma', :require => false
+gem 'mina-sidekiq'
 
 gem 'puma'
+
+# sidekiq
+gem 'sidekiq'
+gem 'sidekiq-status'
