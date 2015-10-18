@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
   <title>JiunjiunMe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -21,7 +22,34 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container-full">
+  <div class="header text-center">
+    <%= image_tag('me.jpg', class: 'img-thumbnail img-circle') %>
+    <div class="card">
+      <div id="name">jiunjiun</div>
+      <hr/>
+      <%= yield %>
+      <div class="footer">
+        <ul class="list-inline">
+          <li>
+            <%= link_to 'Blog', 'http://jiunjiun.logdown.com/', target: '_blank' %>
+          </li>
+          <li>
+            <%= link_to 'Facebook', 'http://fb.me/doublejiun', target: '_blank' %>
+          </li>
+          <li>
+            <%= link_to 'GitHub', 'http://github.com/jiunjiun', target: '_blank' %>
+          </li>
+          <li>
+            <%= mail_to 'quietmes@gmail.com', 'Email' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </body>
 </html>
